@@ -1,0 +1,22 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    width: 400px;
+    margin-left: 25px;
+}
+
+.section {
+    padding-top: 15px;
+}
+
+.section h2 {
+    color: #447898;
+}
+
+.section h3 {
+    color: #447818;
+}
+
+#loading {
+    margin-left: 40%;
+}
