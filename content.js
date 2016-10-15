@@ -28,7 +28,7 @@
 function getPartOfDay(hour) {
     if (hour > 12 && hour < 18) {
         return 'afternoon'
-    } else if( hour > 18 && hour < 6) {
+    } else if( hour > 18 || hour < 6) {
         return 'night'
     }
 
