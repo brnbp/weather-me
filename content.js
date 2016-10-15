@@ -1,15 +1,11 @@
 
-(function() { 
-
+(function() {
+    
+    const currentHour = new Date().getHours()
+    
     showLoader(true)
 
-    const currentHour = new Date().getHours()
-
     $('#title h2 span').text(getPartOfDay(currentHour))
-
-
-   
-
 
     $.getJSON('http://ipinfo.io', function (body) {
         const city = body.city || 'Sao Paulo'
@@ -40,7 +36,6 @@ function getPartOfDay(hour) {
 
     return 'morning';
 }
-
 
 function showLoader(flag)
 {
