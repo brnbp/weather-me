@@ -22,11 +22,9 @@
           showLoader(false)
           $('#title h2').append(' in ' + city + ':')
 
-            const icon = body.weather[0].icon
-            const image = '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
-
-          $('#weather').text("It's " + Math.floor(body.main.temp) + "c and " + body.weather[0].description)
-          $('#weather').append(image)
+          $('#weather')
+            .text("It's " + Math.floor(body.main.temp) + "c and " + body.weather[0].description)
+            .append('<img src="http://openweathermap.org/img/w/' + body.weather[0].icon + '.png">')
         })
     })
 
