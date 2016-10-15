@@ -1,11 +1,15 @@
 
 (function() { 
 
-    const currentHour = new Date().getHours()
-
     showLoader(true)
 
+    const currentHour = new Date().getHours()
+
     $('#title h2 span').text(getPartOfDay(currentHour))
+
+
+   
+
 
     $.getJSON('http://ipinfo.io', function (body) {
         const city = body.city || 'Sao Paulo'
@@ -14,7 +18,9 @@
             return
         }
 
-        const url = 'http://api.openweathermap.org/data/2.5/weather?appid=a3ed1549cd8e7a34bd6148a5d1e56a5e&q='+ encodeURIComponent(city) +'&units=metric';
+        const weatherApiKey = 'a3ed1549cd8e7a34bd6148a5d1e56a5e'
+
+        const url = 'http://api.openweathermap.org/data/2.5/weather?appid=' + weatherApiKey + '&q='+ encodeURIComponent(city) +'&units=metric';
       
         $.getJSON(url, function (body) {
           showLoader(false)
