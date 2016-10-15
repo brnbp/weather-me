@@ -20,7 +20,7 @@
       
         $.getJSON(url, function (body) {
           showLoader(false)
-          $('#title h2').append(' in ' + city + ':')
+          $('#title h2').append(city + ':')
 
           $('#weather')
             .text("It's " + Math.floor(body.main.temp) + "c and " + body.weather[0].description)
@@ -31,7 +31,7 @@
 })()
 
 function getPartOfDay(hour) {
-    if (hour > 12 && hour < 18) {
+    if (hour >= 12 && hour <= 18) {
         return 'afternoon'
     } else if( hour > 18 || hour < 6) {
         return 'night'
